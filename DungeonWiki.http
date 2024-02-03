@@ -1,0 +1,6 @@
+@DungeonWiki_HostAddress = http://localhost:5294
+
+GET {{DungeonWiki_HostAddress}}/test/index.html
+Accept: application/json
+
+###
