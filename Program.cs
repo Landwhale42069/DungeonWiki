@@ -1,3 +1,6 @@
+using DungeonWiki.Databases.Models;
+using DungeonWiki.Utilities;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
@@ -20,7 +23,10 @@ app.MapControllerRoute(
     pattern: "{controller}/{action}"
 );
 
-
 app.MapControllers();
+
+var dbManager = new DatabaseManager();
+var poopus = dbManager.GetDatabase("poopus");
+poopus.Create();
 
 app.Run();
