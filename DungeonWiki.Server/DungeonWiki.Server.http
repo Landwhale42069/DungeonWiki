@@ -1,0 +1,6 @@
+@DungeonWiki.Server_HostAddress = http://localhost:5217
+
+GET {{DungeonWiki.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

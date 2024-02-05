@@ -1,13 +1,16 @@
-using DungeonWiki.Databases.Models;
-using DungeonWiki.Utilities;
-
 var builder = WebApplication.CreateBuilder(args);
 
+// Add services to the container.
+
 builder.Services.AddControllers();
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+app.UseDefaultFiles();
+app.UseStaticFiles();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -18,15 +21,10 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller}/{action}"
-);
+app.UseAuthorization();
 
 app.MapControllers();
 
-var dbManager = new DatabaseManager();
-var poopus = dbManager.GetDatabase("poopus");
-poopus.Create();
+app.MapFallbackToFile("/index.html");
 
 app.Run();
