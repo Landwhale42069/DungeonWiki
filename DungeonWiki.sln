@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DungeonWiki.Server", "DungeonWiki.Server\DungeonWiki.Server.csproj", "{D2E0E79A-1BC9-4C64-B222-F5A9A1FBD11E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DungeonWiki.Server", "DungeonWiki.Server\DungeonWiki.Server.csproj", "{D2E0E79A-1BC9-4C64-B222-F5A9A1FBD11E}"
 EndProject
-Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "dungeonwiki.client", "dungeonwiki.client\dungeonwiki.client.esproj", "{CA61F412-D856-4D01-9F9E-838A972ECC20}"
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "DungeonWiki.Client", "dungeonwiki.client\DungeonWiki.Client.esproj", "{CA61F412-D856-4D01-9F9E-838A972ECC20}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

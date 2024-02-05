@@ -25,6 +25,22 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+app.UseStaticFiles(new StaticFileOptions
+{
+    RequestPath = "/wiki",
+});
+
+app.Use(async (context, next) =>
+{
+    await next();
+
+    if (context.Response.StatusCode == 404 && !Path.HasExtension(context.Request.Path.Value))
+    {
+        context.Request.Path = "/wiki/index.html";
+        await next();
+    }
+});
+
 app.MapFallbackToFile("/index.html");
 
 app.Run();

@@ -1,5 +1,5 @@
 {
-  "name": "dungeonwiki.client",
+  "name": "dungeonwiki",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
